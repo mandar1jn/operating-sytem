@@ -9,7 +9,7 @@ start:
 print:
 	mov bx, 0
 .loop:
-	lodsb
+	lodsb ; increment index in message by one, load into register al
 	cmp al, 0
 	je .done
 	call print_char
